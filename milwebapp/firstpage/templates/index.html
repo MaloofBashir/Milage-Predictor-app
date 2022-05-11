@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MPG prediction usecase</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Preadict the milage of your car </h1>
+    <form action="predictMPG" method="post">
+        {% csrf_token %}
+        <label>cylinder</label><input name="cylinerVal" type="text"> <br><br>
+        <label>Displacement</label><input name="dispVal" type="text"><br><br>
+        <label>HorsePower</label><input name="hrspwrVal" type="text"><br><br>
+        <label>acceleration</label><input name="accVal" type="text"><br><br>
+        <label>model</label><input name="modVal" type="text"><br><br>
+        <label>origin</label><input name="originVal" type="text"><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

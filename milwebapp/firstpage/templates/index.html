@@ -8,16 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+    {%  if scoreval  %}
+    <h1>The mpg score is {{scoreval}}</h1>
+    {% endif %}
     <h1> Preadict the milage of your car </h1>
     <form action="predictMPG" method="post">
         {% csrf_token %}
-        <label>cylinder</label><input name="cylinerVal" type="text"> <br><br>
-        <label>Displacement</label><input name="dispVal" type="text"><br><br>
-        <label>HorsePower</label><input name="hrspwrVal" type="text"><br><br>
-        <label>acceleration</label><input name="accVal" type="text"><br><br>
-        <label>model</label><input name="modVal" type="text"><br><br>
-        <label>origin</label><input name="originVal" type="text"><br><br>
-        <input type="submit" value="submit">
+        <label style=" font-size:23px; font-family: Arial, Helvetica, sans-serif;margin:15px">cylinder</label><input style="border-width: 5px; border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="cylinderVal" type="text"> <br><br>
+        <label style="font-size: 23px;font-family: Arial, Helvetica, sans-serif;margin:15px">Displacement</label><input style="border-width: 5px; border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="dispVal" type="text"><br><br>
+        <label style="font-size: 23px;font-family:Arial, Helvetica, sans-serif;margin: 15px;">HorsePower</label><input style="border-width: 5px; border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="hrspwrVal" type="text"><br><br>
+        <label style="font-size:23px;font-family:Arial, Helvetica, sans-serif; margin:15px;">Weight</label><input style="border-width: 5px;border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="weightVal" type="text"><br><br>
+        <label style="font-size: 23px;font-family:Arial, Helvetica, sans-serif;margin:15px;">acceleration</label><input style="border-width: 5px;border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="accVal" type="text"><br><br>
+        <label style="font-size: 23px; font-family:Arial, Helvetica, sans-serif;margin:15px;">model</label><input style="border-width: 5px;border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="modVal" type="text"><br><br>
+        <label style="font-size:23px;font-family:Arial, Helvetica, sans-serif;margin: 15px;">origin</label><input style="border-width: 5px;border-radius: 5px; border-color: cornflowerblue; width:200px ;height:20px;" name="originVal" type="text"><br><br>
+        <input style="margin: 20px;margin-left: 200px;color:rgb(43, 41, 38); font-size: 30px;" type="submit" value="submit">
     </form>
 </body>
 </html>
